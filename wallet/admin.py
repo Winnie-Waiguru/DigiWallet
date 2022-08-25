@@ -3,6 +3,10 @@ from django.contrib import admin
 from wallet.models import Account, Card, Currency, Customer, Loan, Notification, Receipt, Reward, Third_party, Transaction, Wallet
 
 # Register your models here.
+class CustomerAdmin(admin.ModelAdmin):
+    list_display =("first_name","last_name","email")
+    search_fields= ("first_name","last_name")
+    
 admin.site.register(Customer)
 admin.site.register(Currency)
 admin.site.register(Wallet)

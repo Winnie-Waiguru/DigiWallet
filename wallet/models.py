@@ -27,7 +27,7 @@ class Customer(models.Model):
     
 class Currency (models.Model):
     country_of_origin=models.CharField(max_length=24,null=True)
-    Symbol=models.CharField(max_length=15,null=True)
+    symbol=models.CharField(max_length=15,null=True)
     
 class Wallet (models.Model):
     currency=models.ForeignKey('Currency',on_delete=models.CASCADE,related_name='Wallet_currency')
