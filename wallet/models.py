@@ -63,7 +63,7 @@ class Card(models.Model):
     card_status=models.CharField(max_length=15,null=True)
     security_code=models.IntegerField()
     signature=models.ImageField()
-    Wallet=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_wallet')
+    wallet=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_wallet')
     account=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_account')
     issuer=models.CharField(max_length=15,null=True) 
     
