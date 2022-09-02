@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Loan Form</h2>
+      <form method="POST" class="loan_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Request</button>
+      </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Reward Form</h2>
+      <form method="POST" class="reward_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Receive</button>
+      </form>
+    </body>
+</html>
