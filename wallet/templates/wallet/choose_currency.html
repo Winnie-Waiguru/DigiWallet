@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Pick currency</h2>
+      <form method="POST" class="currency_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Choose</button>
+      </form>
+    </body>
+</html>

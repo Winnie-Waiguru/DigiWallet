@@ -27,7 +27,7 @@ class Customer(models.Model):
     
 class Currency (models.Model):
     country_of_origin=models.CharField(max_length=24,null=True)
-    Symbol=models.CharField(max_length=15,null=True)
+    symbol=models.CharField(max_length=15,null=True)
     
 class Wallet (models.Model):
     currency=models.ForeignKey('Currency',on_delete=models.CASCADE,related_name='Wallet_currency')
@@ -63,7 +63,7 @@ class Card(models.Model):
     card_status=models.CharField(max_length=15,null=True)
     security_code=models.IntegerField()
     signature=models.ImageField()
-    Wallet=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_wallet')
+    wallet=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_wallet')
     account=models.ForeignKey('Account',on_delete=models.CASCADE,related_name='Card_account')
     issuer=models.CharField(max_length=15,null=True) 
     

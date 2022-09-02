@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Register Wallet</h2>
+      <form method="POST" class="wallet_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Register</button>
+      </form>
+    </body>
+</html>

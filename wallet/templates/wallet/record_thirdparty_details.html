@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Third_party Details</h2>
+      <form method="POST" class="third_party_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Submit</button>
+      </form>
+    </body>
+</html>

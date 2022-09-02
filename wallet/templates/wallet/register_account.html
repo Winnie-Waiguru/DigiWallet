@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Register Account</h2>
+      <form method="POST" class="account_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Register</button>
+      </form>
+    </body>
+</html>

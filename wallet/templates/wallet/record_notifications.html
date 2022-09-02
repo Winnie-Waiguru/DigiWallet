@@ -1,0 +1,11 @@
+<html>
+  <head>
+  </head>
+    <body>
+      <h2>Notification</h2>
+      <form method="POST" class="notifications_form">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit" class="submit_btn">Notify</button>
+      </form>
+    </body>
+</html>
